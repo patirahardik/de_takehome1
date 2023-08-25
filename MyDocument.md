@@ -42,10 +42,18 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
 ```
 
 ## Assumptions
-1. Code will be executed in jupytor notebook. Hence using display Command instead of show to presenting the dataframe content
+1. Code will be executed in jupytor notebook. Hence using display Command instead of show to presenting the dataframe content.
+2. Most of the time categorical column should be string type but for this analysis assuming that categorical columns can be any type.
+3. Rounding is required for salary related columns in KPI.
 
 ## Learnings
 #### Data Exploration
-A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
+1. A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
+
+## Findings
+1. Salary range is linked with salary frequency and Hours/Shift. To get any metrics which depends on salary we need to have salary in same frequency. 
+2. Need to use excape charater `'"'` because data is getting parsed incorretly. This is the observation from data profiling.
 
 
+## References
+https://s3.amazonaws.com/assets.datacamp.com/email/other/Data+Visualizations+-+DataCamp.pdf
