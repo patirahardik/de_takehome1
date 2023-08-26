@@ -6,6 +6,7 @@
 5. [ Assumptions ](#assumptions)
 6. [ Learnings ](#learnings)
     * [ Spark Configuration Guide ](#spark_config_guide)
+    * [ Data Exploration ](#data_exploration)
 6. [ Findings ](#findings)
 7. [ References ](#references)
  
@@ -101,7 +102,7 @@ jupyter:
 ```python
 spark.conf.set('spark.sql.shuffle.partitions',4)
 ```
-
+<a name="data_exploration"></a>
 #### Data Exploration
 1. A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
 
