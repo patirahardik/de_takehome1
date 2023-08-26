@@ -1,7 +1,14 @@
 ## Table of content
 1. [ Infra issues ](#infa_issues)
 2. [ Spark Configuration Guide ](#spark_config_guide)
-
+3. [ Design ](#design)
+4. [ Plan of action ](#plan_of_action)
+5. [ Deployment ](#deployment)
+6. [ Assumptions ](#assumptions)
+7. [ Learnings ](#learnings)
+8. [ Findings ](#findings)
+9. [ References ](#references)
+ 
 <a name="infa_issues"></a>
 ## Infra issue
 
@@ -41,7 +48,7 @@ jupyter:
 ```python
 spark.conf.set('spark.sql.shuffle.partitions',4)
 ```
-
+<a name="design"></a>
 ## Design
 ### Folder Structure
     -- jupyter
@@ -53,6 +60,7 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
                     |-- utils # all the utilities scripts. This folder will be excluded from unit tests.
                     |-- unit_test # folder will have all the unit test scripts. 
 
+<a name="plan_of_action"></a>
 ## Plan of Action
 ### Data Exploration
 1. Code for Data Exploration
@@ -79,24 +87,27 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
 4. Visualize data profiling.
 5. Visualize KPIs. 
 
+<a name="deployemnt"></a>
 ### Deployment
 1. Document the deployment steps in general.
 
-
+<a name="assumptions"></a>
 ## Assumptions
 1. Code will be executed in jupytor notebook. Hence using display Command instead of show to presenting the dataframe content.
 2. Most of the time categorical column should be string type but for this analysis assuming that categorical columns can be any type.
 3. Rounding is required for salary related columns in KPI.
 4. Considering KPI as separate task since it might required data preparation.
 
+<a name="learnings"></a>
 ## Learnings
 #### Data Exploration
 1. A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
 
+<a name="findings"></a>
 ## Findings
 1. Salary range is linked with salary frequency and Hours/Shift. To get any metrics which depends on salary we need to have salary in same frequency. 
 2. Need to use excape charater `'"'` because data is getting parsed incorretly. This is the observation from data profiling.
 
-
+<a name="references"></a>
 ## References
 https://s3.amazonaws.com/assets.datacamp.com/email/other/Data+Visualizations+-+DataCamp.pdf
