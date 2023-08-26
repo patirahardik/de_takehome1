@@ -1,13 +1,13 @@
 ## Table of content
 1. [ Infra issues ](#infa_issues)
-2. [ Spark Configuration Guide ](#spark_config_guide)
-3. [ Design ](#design)
-4. [ Plan of action ](#plan_of_action)
-5. [ Deployment ](#deployment)
-6. [ Assumptions ](#assumptions)
-7. [ Learnings ](#learnings)
-8. [ Findings ](#findings)
-9. [ References ](#references)
+2. [ Design ](#design)
+3. [ Plan of action ](#plan_of_action)
+4. [ Deployment ](#deployment)
+5. [ Assumptions ](#assumptions)
+6. [ Learnings ](#learnings)
+    * [ Spark Configuration Guide ](#spark_config_guide)
+6. [ Findings ](#findings)
+7. [ References ](#references)
  
 <a name="infa_issues"></a>
 ## Infra issue
@@ -35,19 +35,6 @@ jupyter:
 
 **Status**: After fixing Issue 1, Spark UI is opening on url http://127.0.0.1:4040
 
-<a name="spark_config_guide"></a>
-## Spark Configuration Guide
-### Setting up spark session configuration in jupytor
-1. Before creation spark session set the spark context level configuration
-```python
-    spark_conf = SparkConf()
-    spark_conf.set("spark.executor.instances", "4") 
-```
-
-2. Reducing shuffle partition number since data is very less.
-```python
-spark.conf.set('spark.sql.shuffle.partitions',4)
-```
 <a name="design"></a>
 ## Design
 ### Folder Structure
@@ -100,6 +87,21 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
 
 <a name="learnings"></a>
 ## Learnings
+
+<a name="spark_config_guide"></a>
+### Spark Configuration Guide
+#### Setting up spark session configuration in jupytor
+1. Before creation spark session set the spark context level configuration
+```python
+    spark_conf = SparkConf()
+    spark_conf.set("spark.executor.instances", "4") 
+```
+
+2. Reducing shuffle partition number since data is very less.
+```python
+spark.conf.set('spark.sql.shuffle.partitions',4)
+```
+
 #### Data Exploration
 1. A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
 
