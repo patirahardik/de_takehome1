@@ -41,10 +41,45 @@ jupyter:
 spark.conf.set('spark.sql.shuffle.partitions',4)
 ```
 
+## Design
+### Folder Structure
+    -- jupyter
+        |-- notebook
+            |-- dataproducts
+                |-- assesment_nyc_job_posting
+                    |-- lib # all the transformation scripts which can be unit tests
+                    |-- main # main file only to call transformation. It should not have any logic. This folder will be excluded from unit tests.
+                    |-- utils # all the utilities scripts. This folder will be excluded from unit tests.
+                    |-- unit_test # folder will have all the unit test scripts. 
+
+## Plan of Action
+### Data Exploration
+1. Code for Data Exploration
+2. Integrate with main file.
+3. Write UTs for Data Explorations.
+4. Documentation
+
+### Data Cleaning
+1. Code for Data Cleaning.
+2. Integrate with main file.
+3. Write UTs for data cleaning.
+4. Documentaion
+
+### KPIs
+1. Code for KPIs.
+2. Integrate with main file.
+3. Write UTs for KPIs.
+4. Documentation.
+
+### Deployment
+1. Document the deployment steps in general.
+
+
 ## Assumptions
 1. Code will be executed in jupytor notebook. Hence using display Command instead of show to presenting the dataframe content.
 2. Most of the time categorical column should be string type but for this analysis assuming that categorical columns can be any type.
 3. Rounding is required for salary related columns in KPI.
+4. Considering KPI as separate task since it might required data preparation.
 
 ## Learnings
 #### Data Exploration
