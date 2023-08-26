@@ -1,7 +1,8 @@
-### Infra issue
+## Table of content
+1. [ Infra issues ](#infa_issues)
+2. [ Spark Configuration Guide ](#spark_config_guide)
 
-#### Spark UI not opening
-
+<a name="infa_issues"></a>
 ## Infra issue
 
 ### Spark UI not opening
@@ -27,7 +28,7 @@ jupyter:
 
 **Status**: After fixing Issue 1, Spark UI is opening on url http://127.0.0.1:4040
 
-
+<a name="spark_config_guide"></a>
 ## Spark Configuration Guide
 ### Setting up spark session configuration in jupytor
 1. Before creation spark session set the spark context level configuration
@@ -70,6 +71,13 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
 2. Integrate with main file.
 3. Write UTs for KPIs.
 4. Documentation.
+
+### Visualization
+1. Perform computation in spark.
+2. Convert it to pandas after computation to visualize it.
+3. use of matplotlib.
+4. Visualize data profiling.
+5. Visualize KPIs. 
 
 ### Deployment
 1. Document the deployment steps in general.
