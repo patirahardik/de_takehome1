@@ -103,7 +103,7 @@ jupyter:
 spark.conf.set('spark.sql.shuffle.partitions',4)
 ```
 <a name="data_exploration"></a>
-#### Data Exploration
+### Data Exploration
 1. A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
 
 <a name="findings"></a>
