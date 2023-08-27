@@ -41,7 +41,7 @@ jupyter:
 ### Folder Structure
     -- jupyter
         |-- notebook
-            |-- dataproducts
+            |-- dataproducts  # folder which can consist multiple data products
                 |-- assesment_nyc_job_posting
                     |-- lib # all the transformation scripts which can be unit tests
                     |-- main # main file only to call transformation. It should not have any logic. This folder will be excluded from unit tests.
@@ -85,6 +85,7 @@ jupyter:
 2. Most of the time categorical column should be string type but for this analysis assuming that categorical columns can be any type.
 3. Rounding is required for salary related columns in KPI.
 4. Considering KPI as separate task since it might required data preparation.
+5. Converting pyspark to pandas df to show visualization. Here computaion will be done in pyspark and viz will be shown using dataframe.
 
 <a name="learnings"></a>
 ## Learnings
