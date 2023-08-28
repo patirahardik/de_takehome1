@@ -51,22 +51,22 @@ jupyter:
 <a name="plan_of_action"></a>
 ## Plan of Action
 ### Data Exploration
-1. Code for Data Exploration
-2. Integrate with main file.
-3. Write UTs for Data Explorations.
-4. Documentation
+1. Code for Data Exploration - Done
+2. Integrate with main file. - Done
+3. Write UTs for Data Explorations. - Done
+4. Documentation - Done
 
 ### Data Cleaning
-1. Code for Data Cleaning.
-2. Integrate with main file.
-3. Write UTs for data cleaning.
-4. Documentaion
+1. Code for Data Cleaning. - In-Progress
+2. Integrate with main file. - In-Progress
+3. Write UTs for data cleaning. - In-Progress
+4. Documentaion - In-Progress
 
 ### KPIs
-1. Code for KPIs.
-2. Integrate with main file.
-3. Write UTs for KPIs.
-4. Documentation.
+1. Code for KPIs. - In-Progress
+2. Integrate with main file. - In-Progress
+3. Write UTs for KPIs. - In-Progress
+4. Documentation. - In-Progress
 
 ### Visualization
 1. Perform computation in spark.
@@ -107,6 +107,12 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
 ### Data Exploration
 1. A categorical variable has values that you can put into a countable number of distinct groups based on a characteristic.
 
+### Text Preproccessing
+1. Cleaning - Remove punctuation
+2. Tokenization - Split into words
+3. Remove Stop words - Remove words which doesn't hold any value
+4. Lemmatization - converting the word into its dictionary form
+
 <a name="findings"></a>
 ## Findings
 1. Salary range is linked with salary frequency and Hours/Shift. To get any metrics which depends on salary we need to have salary in same frequency. 
@@ -115,3 +121,5 @@ spark.conf.set('spark.sql.shuffle.partitions',4)
 <a name="references"></a>
 ## References
 https://s3.amazonaws.com/assets.datacamp.com/email/other/Data+Visualizations+-+DataCamp.pdf
+https://www.geeksforgeeks.org/what-is-feature-engineering/
+https://www.youtube.com/watch?v=hhjn4HVEdy0
