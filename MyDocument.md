@@ -75,7 +75,18 @@ jupyter:
 
 <a name="deployemnt"></a>
 ### Deployment
-1. Document the deployment steps in general.
+Need to follow below steps for deployment. Assuming sonarqube is available to show coverage report and third party repository to save the artifacts.
+CI - 
+1. Run pytest to run the unit test cases and create the coverage reports. 
+2. Once pytest is successful push the report to sonerqube. 
+3. Creating artifacts by creating the zip file of code and jupyter folder.
+4. Push the artifactes to thrid part repository.
+
+CD -
+1. Download the artifacts from repository.
+2. Unzip it.
+3. Push the files into required locations. 
+
 
 <a name="assumptions"></a>
 ## Assumptions
