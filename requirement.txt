@@ -1,3 +1,4 @@
 ntlk
 pytest
 ipytest
+ydata-profiling
