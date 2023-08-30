@@ -76,6 +76,7 @@ jupyter:
 <a name="deployemnt"></a>
 ### Deployment
 Need to follow below steps for deployment. Assuming sonarqube is available to show coverage report and third party repository to save the artifacts.
+
 CI - 
 1. Run pytest to run the unit test cases and create the coverage reports. 
 2. Once pytest is successful push the report to sonerqube. 
