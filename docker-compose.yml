@@ -12,7 +12,7 @@ services:
     container_name: master
     image: arjones/pyspark:2.4.5
     restart: always
-    command: bash -c "/opt/spark/sbin/start-master.sh"
+    command: bash -c "pip3 install nltk; python /app/init.py; /opt/spark/sbin/start-master.sh;"
     environment:
       MASTER: spark://master:7077
       SPARK_NO_DAEMONIZE: 1
@@ -30,7 +30,7 @@ services:
     container_name: worker1
     image: arjones/pyspark:2.4.5
     restart: always
-    command: bash -c "/opt/spark/sbin/start-slave.sh spark://master:7077"
+    command: bash -c "pip3 install nltk; python /app/init.py; /opt/spark/sbin/start-slave.sh spark://master:7077;"
     environment:
       MASTER: spark://master:7077
       SPARK_NO_DAEMONIZE: 1
@@ -49,7 +49,7 @@ services:
     container_name: worker2
     image: arjones/pyspark:2.4.5
     restart: always
-    command: bash -c "/opt/spark/sbin/start-slave.sh spark://master:7077"
+    command: bash -c "pip3 install nltk; python /app/init.py; /opt/spark/sbin/start-slave.sh spark://master:7077"
     environment:
       MASTER: spark://master:7077
       SPARK_NO_DAEMONIZE: 1
@@ -68,6 +68,7 @@ services:
     container_name: jupyter
     image: arjones/pyspark:2.4.5
     restart: always
+    command: bash -c "pip3 install nltk; python /app/init.py; /usr/local/bin/jupyter notebook --allow-root --no-browser --ip=0.0.0.0;"
     environment:
       MASTER: spark://master:7077
     depends_on:

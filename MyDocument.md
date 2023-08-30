@@ -86,6 +86,7 @@ jupyter:
 3. Rounding is required for salary related columns in KPI.
 4. Considering KPI as separate task since it might required data preparation.
 5. Converting pyspark to pandas df to show visualization. Here computaion will be done in pyspark and viz will be shown using dataframe.
+6. Assuming nltk library will be installed in all the nodes. This we can achive using initialization script.
 
 <a name="learnings"></a>
 ## Learnings
