@@ -57,23 +57,21 @@ jupyter:
 4. Documentation - Done
 
 ### Data Cleaning
-1. Code for Data Cleaning. - In-Progress
-2. Integrate with main file. - In-Progress
+1. Code for Data Cleaning. - Done
+2. Integrate with main file. - Done
 3. Write UTs for data cleaning. - In-Progress
-4. Documentaion - In-Progress
+4. Documentaion - Done
 
 ### KPIs
-1. Code for KPIs. - In-Progress
-2. Integrate with main file. - In-Progress
+1. Code for KPIs. - Done
+2. Integrate with main file. - Done
 3. Write UTs for KPIs. - In-Progress
-4. Documentation. - In-Progress
+4. Documentation. - Done
 
 ### Visualization
-1. Perform computation in spark.
-2. Convert it to pandas after computation to visualize it.
-3. use of matplotlib.
-4. Visualize data profiling.
-5. Visualize KPIs. 
+1. Perform computation in spark. - Done
+2. Convert it to pandas after computation to visualize it. - Done
+3. Visualize data profiling. In-Progress
 
 <a name="deployemnt"></a>
 ### Deployment
